@@ -1,12 +1,12 @@
-# Android Challenge 3: What's with the Search?
+# Mobile Challenge 3: What's with the Search?
 
 ### Challenge Description:
 > There is an admin dashboard in the Korovax mobile. There aren't many functions, but we definitely can search for something!
 
 ## Foreword
-This challenge comes after android-challenge-4, titled "True or false?", and the numbering is slightly weird, hence in both writeups I might repeat some things already mentioned in the other just in case some people are only interested in one. This challenge was a pretty simple one, so let's get right into it.
+This challenge comes after mobile-challenge-4, titled "True or false?", and the numbering is slightly weird, hence in both writeups I might repeat some things already mentioned in the other just in case some people are only interested in one. This challenge was a pretty simple one, so let's get right into it.
 
-DISCLAIMER: This challenge requires you to have already logged into the admin panel. If you don't know how to do that, please refer to the writeup for android-challenge-4.
+DISCLAIMER: This challenge requires you to have already logged into the admin panel. If you don't know how to do that, please refer to the writeup for mobile-challenge-4.
 
 You can download the challenge file (mobile-challenge.apk) from [here](https://drive.google.com/file/d/1tf8-C1FKYBMKGICRKYe7abGGs3LX2i2m/view?usp=sharing).
 

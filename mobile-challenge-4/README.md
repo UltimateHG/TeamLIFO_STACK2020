@@ -1,10 +1,10 @@
-# Android Challenge 4: True or false?
+# Mobile Challenge 4: True or false?
 
 ## Challenge Description
 > True or false, we can log in as admin easily.
 
 ## Foreword
-This challenge actually comes before android-challenge-3, titled "What's with the Search?", the numbering is slightly weird, hence in both writeups I might repeat some things already mentioned in the other just in case some people are only interested in one. Also a disclaimer, there are actually 3 ways that I found that lets you complete the challenge, and I'll also let you know the way that I actually initially used to solve it before discovering the other methods. But of course, I'll start from the most basic (with no android knowledge) way and then reveal the ever-so-slightly cheesy way. :)
+This challenge actually comes before mobile-challenge-3, titled "What's with the Search?", the numbering is slightly weird, hence in both writeups I might repeat some things already mentioned in the other just in case some people are only interested in one. Also a disclaimer, there are actually 3 ways that I found that lets you complete the challenge, and I'll also let you know the way that I actually initially used to solve it before discovering the other methods. But of course, I'll start from the most basic (with no android knowledge) way and then reveal the ever-so-slightly cheesy way. :)
 
 You can download the challenge file (mobile-challenge.apk) from [here](https://drive.google.com/file/d/1tf8-C1FKYBMKGICRKYe7abGGs3LX2i2m/view?usp=sharing).
 
@@ -89,7 +89,7 @@ Ok, this is quite a lot to digest at first look, so let's break it down slowly. 
 
 We know already that one potential way to solve the challenge is to find out how to meet the condition of the `if` statmement, which just checks if the user's input contains the return value of this curious `c.a.a.a.a(long)` function.
 
- Let's take a look at `c.a.a.a.a()` It is within the `c.a.a` package, so let's expand that:
+Let's take a look at `c.a.a.a.a()` It is within the `c.a.a` package, so let's expand that:
 
 <div style="text-align:center"><img src="./images/caa_pkg.png" /></div>
 
@@ -262,7 +262,7 @@ if (a.this.f2851c.getText().toString().contains(c.a.a.a.a(-891818782648L))) {
 }
 ```
 
-I took a look at this and thought "I really don't wanna touch those wrappers if possible", so I thought "what if I patched the APK such that the condition check will either 1) always be true or 2) not even be there? We know that the condition check is within another class defined in `f.a.a.a.a.a`, class `b`, so I opened up the smali code for `f.a.a.a.a.a.b` and looked for condition checks. Condition checks in smali is represented by code similar to
+I took a look at this and thought "I really don't wanna touch those wrappers if possible", so I thought "what if I patched the APK such that the condition check will either 1) always be true or 2) not even be there?" We know that the condition check is within another class defined in `f.a.a.a.a.a`, class `b`, so I opened up the smali code for `f.a.a.a.a.a.b` and looked for condition checks. Condition checks in smali is represented by code similar to:
 ```
 sget-object v1, Lf/a/a/a/a/c/a;->a:Lf/a/a/a/a/c/a;
 
@@ -327,7 +327,7 @@ if-eqz v1, :cond_0
 :cond_0
 ```
 
-Leave all the code in the middle intact to make sure whatever is executed if condition check passes is still executed (if we remove it we literally remove the successful execution).
+The latter `:cond_0` is the one at the very end of the earlier-shown smali code snippet. Leave all the code in the middle intact to make sure whatever is executed if condition check passes is still executed (if we remove it we literally remove the successful execution).
 
 But wait, it can't be this easy, right? Let's build the patched APK with APKTool and sign it with Uber APK Signer, then install it on our device with adb:
 ```
