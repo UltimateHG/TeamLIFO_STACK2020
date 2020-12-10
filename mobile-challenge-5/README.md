@@ -6,6 +6,8 @@
 ## Foreword
 This challenge actually has 3 ways of solving it, one is a more "basic" way while the other 2 are slightly cheesy, I will be going through all 3 methods of solving the challenge, then I'll reveal which method I used to solve the challenge. This writeup may contain some duplicate information from other mobile writeups, but this is to cater to those that only wish to read the writeup for this challenge. I'll do this step by step and try to explain as clearly as possible so that it can be understood without much background knowledge :)
 
+You can download the challenge file (mobile-challenge.apk) from [here](https://drive.google.com/file/d/1tf8-C1FKYBMKGICRKYe7abGGs3LX2i2m/view?usp=sharing).
+
 ## First Steps
 In order to start solving the challenge, we need to first understand what we have to attack. The challenge description says "do you really need to sign up to be a member?", so we can assume it has somethign to do with logging in. Let's first open the app and take a look at the home screen:
 
