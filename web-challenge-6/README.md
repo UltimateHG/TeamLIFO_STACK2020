@@ -167,10 +167,8 @@ if (!username || !password) {
 
 [Script](./solve.sh)
 
-### Mobile Solution
+### Mobile Solution?
 
-**TODO**
-
-
+The mobile solution uses exactly the same idea by attempting to login from the app while stripping away either the username or the password or both, hence it is not detailed here. But for completeness sake and because it's quite interesting to have multiple ways to get the flag, we included this here.
 
 Flag: `govtech-csg{m!sS1nG_cR3DeN+!@1s}`
