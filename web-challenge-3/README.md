@@ -14,7 +14,7 @@ Opening up the admin panel, we are greeted with a login page:
 
 Since the question gives us the credentials `minion:banana`, we can try inputing it to see what the page throws us.
 
-![login-error](/home/lyc/Documents/VMShare/kali-ctf/_writeups/web-challenge-3/images/login_error.png)
+![login-error](./images/login_error.png)
 
 The error message suggests (as given in the question) that the credentials are recognised but the role is incorrect. Hence, it makes sense for us to proceed with figuring out how the login system works to hopefully either gain access to a privileged user or beat the role check. Naturally, we will look at the front-end code to see if it gives us any clues. Using `curl` (or the developer console), we can view the source easily (beautified here):
 
@@ -134,7 +134,7 @@ The `data.accessToken` looks suspicious here, so let's note down that it's worth
 
 Here, it is likely that the verification is meant to be performed on the token. Let's now dive in to see what the access token really is. Going to the developer console (screenshot shows the interface in firefox), we can see 2 requests. Select the login request to see what data is returned.
 
-![network-requests](/home/lyc/Documents/VMShare/kali-ctf/_writeups/web-challenge-3/images/network_requests.png)
+![network-requests](./images/network_requests.png)
 
 Hmm...`accessToken` looks like `Base64` encoded information. In fact, here we can guess that the `accessToken` is most likely a JSON Web Token (JWT) since it starts with `ey`, which corresponds to `{"`. You can verify this by entering the following into the browser javascript console.
 

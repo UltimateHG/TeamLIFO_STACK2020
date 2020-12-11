@@ -100,25 +100,25 @@ Nice! We got a credential: `user=lionelcxy contact=lionelcheng@protonmail.com` (
 
 Using his email, we find his [LinkedIn profile](https://sg.linkedin.com/in/cheng-xiang-yi-0a4b891b9).
 
-![linkedin](/home/lyc/Documents/VMShare/kali-ctf/TeamLIFO_STACK2020/osint-challenge-8/images/linkedin.png)
+![linkedin](./images/linkedin.png)
 
 So his full name is **Lionel Cheng Xiang Yi**.
 
 Using his username, we find his [Carousell](https://www.carousell.sg/lionelcxy/) and [Instagram](https://www.instagram.com/lionelcxy/) accounts. On his Carousell, we find a few listings. Going through them, we realise the playstation one gives us what we want :)
 
-![1607611758669](/home/lyc/Documents/VMShare/kali-ctf/TeamLIFO_STACK2020/osint-challenge-8/images/carousell.png)
+![carousell](./images/carousell.png)
 
 Aha, so his phone number is **963672918**. Now, let's check the instagram.
 
-![1607611841168](/home/lyc/Documents/VMShare/kali-ctf/TeamLIFO_STACK2020/osint-challenge-8/images/instagram.png)
+![instagram](./images/instagram.png)
 
 Here, we can try both endpoints of his cycling route since that might (unlikely) be his home address. Nope, that didn't work. Let's dive deeper into his Strava account then, which he conveniently linked us to. Clicking on the first post, we see
 
-![1607612097766](/home/lyc/Documents/VMShare/kali-ctf/TeamLIFO_STACK2020/osint-challenge-8/images/strava.png)
+![strava](./images/strava.png)
 
 Did we see Social Spaces is just at his block? Perfect, let's check out the postal code of that using Google Maps!
 
-![maps](/home/lyc/Documents/VMShare/kali-ctf/TeamLIFO_STACK2020/osint-challenge-8/images/maps.png)
+![maps](./images/maps.png)
 
 There's a few social spaces. Of course we can try all of them, but let's try to guess intelligently: from his cycling activity posted on instagram, the one located Marina One seems more likely. Clicking on it, we see that the postal code is **018935**. Putting every thing together, we have a guess for the flag. And that happens to be the correct one!
 
